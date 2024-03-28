@@ -1,16 +1,20 @@
 ﻿
 
-namespace Lab5CSharp
+using Lab6CSharp.task2;
+
+namespace Lab6CSharp
 {
-    class CommercialSoftware : Software
-    { 
+    class CommercialSoftware :ISoftware
+    {
+        public string Name { get; set; }
+        public string Manufacturer { get; set; }
         public DateTime InstallationDate {  get; set; }
         public int UsageDays { get; set; }  
 
         public decimal UsagePrice { get; set; }
 
 
-        public override bool canUse(DateTime currentDate)
+        public bool canUse(DateTime currentDate)
         {
             DateTime installationDate = InstallationDate.Date;
 
@@ -27,7 +31,7 @@ namespace Lab5CSharp
             }
         }
 
-        public override void ShowInfo()
+        public void ShowInfo()
         {
             Console.WriteLine($"Name: {Name}\nManufacturer: {Manufacturer}\nInstallation Date: {InstallationDate}\nUsage Days: {UsageDays}\nPrice: {UsagePrice}\n");
         }

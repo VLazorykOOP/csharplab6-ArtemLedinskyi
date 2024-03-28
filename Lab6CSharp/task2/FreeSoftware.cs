@@ -1,15 +1,19 @@
 ﻿
 
-namespace Lab5CSharp
+using Lab6CSharp.task2;
+
+namespace Lab6CSharp
 {
-     class FreeSoftware:Software
+     class FreeSoftware:ISoftware
     {
-        public override void ShowInfo()
+        public string Name { get; set; }
+        public string Manufacturer { get; set; }
+        public void ShowInfo()
         {
             Console.WriteLine($"Name: {Name}\nManufacturer: {Manufacturer}");
         }
 
-        public override bool canUse(DateTime currentDate)
+        public bool canUse(DateTime currentDate)
         {
             return true;
         }

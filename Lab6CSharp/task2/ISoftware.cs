@@ -8,5 +8,11 @@ namespace Lab6CSharp.task2
 {
     internal interface ISoftware
     {
+        public string Name { get; set; }
+        public string Manufacturer { get; set; }
+
+        void ShowInfo();
+
+        bool canUse(DateTime currentDate);
     }
 }
